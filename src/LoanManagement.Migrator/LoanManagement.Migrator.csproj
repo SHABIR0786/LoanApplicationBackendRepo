@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>LoanManagement.Migrator</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>LoanManagement.Migrator</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="appsettings.json;log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="1.7.5" />
+    <PackageReference Include="Abp.Castle.Log4Net" Version="7.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LoanManagement.Core\LoanManagement.Core.csproj" />
+    <ProjectReference Include="..\LoanManagement.EntityFrameworkCore\LoanManagement.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <VersionPrefix>1.0.0.0</VersionPrefix>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>LoanManagement.Application</AssemblyName>
+    <PackageId>LoanManagement.Application</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>LoanManagement</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.AspNetCore.SignalR" Version="7.1.0" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="1.7.5" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LoanManagement.Core\LoanManagement.Core.csproj" />
+    <ProjectReference Include="..\LoanManagement.EntityFrameworkCore\LoanManagement.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+</Project>
